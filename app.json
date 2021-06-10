@@ -1,0 +1,26 @@
+{
+  "id": "1d74c1a0-8786-4280-ae96-d106f4b3b2ef",
+  "name": "DemoExtension2",
+  "publisher": "Naim",
+  "version": "1.0.0.2",
+  "brief": "Create extension for testing",
+  "description": "Create new table, page list",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "18.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://DemoExtension2.com/help/",
+  "showMyCode": true,
+  "runtime": "7.0"
+}
