@@ -15,7 +15,11 @@
 	- add new objects of all types, except mensuites
 	- add new web services (per tenant or for all tenants)
 	- new capabilities add regularly
-  
+
+- app.json
+	- config the application/extensions
+	- e.g. app name, publisher, description,...
+	
 - AL develeopment best practices
   - create a folder for "res" (for image, resouce, etc..), "test" and "src" (where most code is)
   - "src" contain;
