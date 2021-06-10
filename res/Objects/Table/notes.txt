@@ -1,0 +1,101 @@
+table 50102 Classes
+{
+    /*
+        NOTE: 
+        - if no primary key not set al will pick the no 1 field as primary key
+        - for snippet type ttable
+    */
+    DataClassification = ToBeClassified;
+    Caption = 'Classes';
+    Description = 'A class table that contains infromation of all classes';
+
+    //Declaration of field in the table
+    fields
+    {
+        field(1; ID; Integer)
+        {
+            DataClassification = ToBeClassified;
+            AutoIncrement = true;
+            // ExtendedDatatype = PhoneNo; //for unique/special data type like phone number, URL, email. 
+            // TableRelation = ObjectName //for relation, make sure to add the field name inside keys as foreign key
+
+            trigger OnValidate()
+            var
+                recClasses: Record Classes;
+            begin
+                if xRec.ID <> Rec.ID then begin //if xRec.ID not equal to Rec.ID
+                    recClasses.Reset(); //reset table
+                    if recClasses.Get(ID) then begin
+                        Name := recClasses.Name;
+                    end;
+                end
+            end;
+        }
+        field(2; Name; Text[100])
+        {
+            DataClassification = ToBeClassified;
+        }
+
+        field(3; Active; Boolean)
+        {
+            DataClassification = ToBeClassified;
+        }
+
+        field(4; Mode; Option)
+        {
+            DataClassification = ToBeClassified;
+            OptionMembers = "",Live,"On-Demand";
+            OptionCaption = ' ,Live,On-Demand';
+        }
+
+        field(5; Fee; Decimal)
+        {
+            DataClassification = ToBeClassified;
+        }
+    }
+
+    //Declaration of keys
+    keys
+    {
+        //Declaration of primary key
+        key(PK; ID)
+        {
+            Clustered = true; //Create an index by default in db table to optimize the result
+        }
+
+        // key(key1; PrimaryKeyFieldName, ForeignKeyFieldName)
+        // {
+        //     Clustered = true;
+        // }
+    }
+
+    //Declaration of global var
+    var
+        i: Integer;
+
+    //Trigger code on action
+    trigger OnDelete()
+    var
+    begin
+        Message('Delete success');
+    end;
+
+    trigger OnInsert()
+    var
+    begin
+        Message('Insertion success');
+    end;
+
+    trigger OnModify()
+    var
+    begin
+        Message('Mofification success');
+    end;
+
+    trigger OnRename()
+    var
+    begin
+        Message('Rename success');
+    end;
+
+}
