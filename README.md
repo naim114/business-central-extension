@@ -1,4 +1,4 @@
-# business-central-extension notes
+### business-central-extension notes
 
 - Customizations vs Extensions
 	- Customizations
