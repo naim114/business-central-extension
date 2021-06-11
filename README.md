@@ -37,3 +37,6 @@
 - Create new table and page
   - Use snippet: create new file and type tpage to create page or ttable to create table
   - Use AZ/AL Wizard: right click on folder where you wanted to create file in and choose "New AL File Wizard" then choose Page or Table
+  - Page;
+    - List (show data from db in list form)
+    - Card (modal type page, intergrate with list)

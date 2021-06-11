@@ -1,46 +1,42 @@
-page 50101 Student
+page 50102 "Voucher List"
 {
-    
+
     ApplicationArea = All;
-    Caption = 'Student';
+    Caption = 'Voucher List';
     PageType = List;
-    SourceTable = Student;
+    SourceTable = Voucher;
     UsageCategory = Lists;
-    
+    CardPageId = "Voucher Card";
+
     layout
     {
         area(content)
         {
             repeater(General)
             {
-                field(Active; Rec.Active)
+                field("Voucher ID"; Rec."Voucher ID")
                 {
-                    ToolTip = 'Specifies the value of the Active field';
+                    ToolTip = 'Specifies the value of the Voucher ID field';
                     ApplicationArea = All;
                 }
-                field(Class; Rec.Class)
+                field(Name; Rec.Name)
                 {
-                    ToolTip = 'Specifies the value of the Class field';
+                    ToolTip = 'Specifies the value of the Name field';
                     ApplicationArea = All;
                 }
-                field(Email; Rec.Email)
+                field(Discount; Rec.Discount)
                 {
-                    ToolTip = 'Specifies the value of the Email field';
+                    ToolTip = 'Specifies the value of the Discount field';
                     ApplicationArea = All;
                 }
-                field("Full Name"; Rec."Full Name")
+                field(Category; Rec.Category)
                 {
-                    ToolTip = 'Specifies the value of the Full Name field';
+                    ToolTip = 'Specifies the value of the Category field';
                     ApplicationArea = All;
                 }
-                field("Phone Number"; Rec."Phone Number")
+                field(Available; Rec.Available)
                 {
-                    ToolTip = 'Specifies the value of the Phone Number field';
-                    ApplicationArea = All;
-                }
-                field("Student ID"; Rec."Student ID")
-                {
-                    ToolTip = 'Specifies the value of the Student ID field';
+                    ToolTip = 'Specifies the value of the Available field';
                     ApplicationArea = All;
                 }
                 field(SystemCreatedAt; Rec.SystemCreatedAt)
@@ -71,5 +67,5 @@ page 50101 Student
             }
         }
     }
-    
+
 }

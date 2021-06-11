@@ -28,7 +28,7 @@ table 50101 Student
             DataClassification = ToBeClassified;
             ExtendedDatatype = PhoneNo;
         }
-        field(5; Active; Boolean)
+        field(5; Active; Integer)
         {
             Caption = 'Active';
             DataClassification = ToBeClassified;
@@ -38,8 +38,8 @@ table 50101 Student
             Caption = 'Class';
             DataClassification = ToBeClassified;
             //TODO change to OptionMembers = "Class A","Class B",.. and create new github repo
-            // OptionMembers = "Class A","Class B","Class C","Class D","Class E";
-            OptionMembers = Any,Email,Phone,Fax,Mail;
+            OptionMembers = "Class A","Class B","Class C","Class D","Class E";
+            // OptionMembers = Any,Email,Phone,Fax,Mail;
         }
     }
     keys

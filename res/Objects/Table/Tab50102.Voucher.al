@@ -9,6 +9,8 @@ table 50102 Voucher
         {
             Caption = 'Voucher ID';
             DataClassification = ToBeClassified;
+            // AutoIncrement = true;
+            // TableRelation = Student;
         }
         field(2; Name; Text[200])
         {
@@ -40,4 +42,18 @@ table 50102 Voucher
         }
     }
 
+    trigger OnInsert()
+    begin
+        Message('Voucher inserted!');
+    end;
+
+    trigger OnModify()
+    begin
+        Message('Voucher edited!');
+    end;
+
+    trigger OnDelete()
+    begin
+        Message('Voucher deleted!');
+    end;
 }

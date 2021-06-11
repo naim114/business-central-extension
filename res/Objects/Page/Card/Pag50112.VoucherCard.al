@@ -1,17 +1,19 @@
-page 50102 "Voucher List"
+page 50112 "Voucher Card"
 {
-    
-    ApplicationArea = All;
-    Caption = 'Voucher List';
-    PageType = List;
+
+    Caption = 'Voucher';
+    PageType = Card;
     SourceTable = Voucher;
-    UsageCategory = Lists;
-    
+
+    // to make card accessable from anywhere
+    // ApplicationArea = All;
+    // UsageCategory = Administration;
+
     layout
     {
         area(content)
         {
-            repeater(General)
+            group(General)
             {
                 field("Voucher ID"; Rec."Voucher ID")
                 {
@@ -66,5 +68,5 @@ page 50102 "Voucher List"
             }
         }
     }
-    
+
 }
