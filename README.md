@@ -40,3 +40,8 @@
   - Page;
     - List (show data from db in list form)
     - Card (modal type page, intergrate with list)
+
+- Create query
+  - Use AL File Wizard, enter object name, table of query and choose fields
+  - at BC search Web Services, add new, enter object ID,name, bantai je service name
+  - OData V4 URL will generate itself when done add new
